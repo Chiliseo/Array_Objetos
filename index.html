@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Array y Objetos en JS</title>
+    </head>
+    <body onload="init();">
+        <ul id="lista">
+        
+        </ul>
+        <script>
+            function init() {
+                var objeto = [{ nombre: "Adriano", apellido: "chiliseo"}];
+                alert(objeto[0].nombre);
+                var arreglo = new Array();
+                arreglo = ['1', '2', '3', '4']['1','2','3','4'];
+                var elemento_html = document.getElementById("lista");
+                for (inicia = 0; inicia < arreglo.length; inicia++) {
+                    elemento_html.innerHTML += "<li>" + arreglo[inicia] + "</li>";
+                }
+            }
+        </script>
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+                alert("Cargo el documento");
+                 var objeto = [{ nombre: "Adriano", apellido: "chiliseo"}];
+                alert(objeto[0].nombre);
+                var arreglo = new Array();
+                arreglo = ['1', '2', '3', '4'];
+                for (inicia = 0; inicia < arreglo.length; inicia++) {
+                    $('ul').append('<li>' + arreglo[inicia] + '</li>')
+                }
+            });
+            $(window).load(function () {
+
+                alert("Cargo la venta");
+            })
+        </script>
+    </body>
+</html>

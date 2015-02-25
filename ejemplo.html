@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <ul class="lista" id="lista"></ul>
+        <input type="text" onkeypress="funcionMSJ()"/>
+        <label class="enviando"></label>
+        <script src="jquery.js"></script>
+         
+         <script>
+             var objeto;
+             var arreglo = new Array();
+             arreglo = ['Adriano', 'Will', 'Luisa', 'Lili', 'Ingrid'];
+             //             0       1          2        3       4
+             objeto = [{
+                 nombre: 'Adriano',
+                 Apellido: 'Chiliseo',
+                 email: 'adrianochiliseo@noemail.com',
+                 tiene_facebook: true,
+                 numero_celular: 76862071,
+                 img: 'http://wallpaper.ultradownloads.com.br/277285_Papel-de-Parede-Meme-Spiderpman_1920x1200.jpg'
+             }, { nombre: 'Luisa',
+                 Apellido: 'Andrino',
+                 email: 'luisaandrino@noemail.com',
+                 tiene_facebook: true,
+                 numero_celular: 77777777,
+                 img: 'http://wallpaper.ultradownloads.com.br/277285_Papel-de-Parede-Meme-Spiderpman_1920x1200.jpg'
+             }];
+             for (inicia = 0; inicia < arreglo.length; inicia++) { 
+             $('#lista').append('<li>' + arreglo[inicia] + '</li>');
+             //$('.lista').append('<li>' + arreglo[0]=Adriano + '</li>');
+             //$('.lista').append('<li>' + arreglo[1]=Will + '</li>');
+             //$('.lista').append('<li>' + arreglo[2]=Will + '</li>');
+             //$('.lista').append('<li>' + arreglo[3]=Will + '</li>');
+             }
+
+             $('.lista').append('<li>' + objeto[0].nombre + '</li>');
+             $('.lista').append('<li>' + objeto[1].Apellido + '</li>');
+             $('.lista').append('<li><img src="' + objeto[1].img + '" height="100" width="200" ></li>');
+        </script>
+        <script>
+             var hola = prompt();
+             
+             var arreglo2 = new Array();
+             arreglo2[arreglo2.length] = hola;
+              $('#lista').append('<li>' + arreglo2[0] + '</li>');
+         </script>
+    </body>
+</html>
